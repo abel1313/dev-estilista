@@ -16,6 +16,14 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
+    path: 'servicios',
+    loadChildren: () => import('./home/servicios/servicios.module').then(s=> s.ServiciosModule)
+  },
+  {
+    path: 'productos',
+    loadChildren: () => import('./home/productos/productos.module').then(p=> p.ProductosModule)
+  },
+  {
     path: '**', component: PaginaNoDisponibleComponent
   }
 ];
