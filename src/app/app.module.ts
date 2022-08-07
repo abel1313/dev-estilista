@@ -7,6 +7,8 @@ import { FooterComponent } from './layout/component/footer/footer.component';
 import { HeaderComponent } from './layout/component/header/header.component';
 import { ContainerComponent } from './layout/component/container/container.component';
 import { PaginaNoDisponibleComponent } from './layout/component/pagina-no-disponible/pagina-no-disponible.component';
+import { SharedModule } from './shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { PaginaNoDisponibleComponent } from './layout/component/pagina-no-dispon
     FooterComponent,
     HeaderComponent,
     ContainerComponent,
-    PaginaNoDisponibleComponent
+    PaginaNoDisponibleComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

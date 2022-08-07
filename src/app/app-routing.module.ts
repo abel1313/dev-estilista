@@ -5,7 +5,7 @@ import { PaginaNoDisponibleComponent } from './layout/component/pagina-no-dispon
 
 const routes: Routes = [
   {
-    path: '', component: HomeComponent
+    path: '', redirectTo: '/productos', pathMatch: 'full'
   },
   {
     path: 'clientes',
@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'productos',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    loadChildren: () => import('./home/productos/productos.module').then(p => p.ProductosModule)
   },
   {
     path: '**', component: PaginaNoDisponibleComponent

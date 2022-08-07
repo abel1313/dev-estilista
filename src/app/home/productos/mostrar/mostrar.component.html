@@ -1,0 +1,47 @@
+
+
+<div class="row">
+    <div class="col-4 mt-3" *ngFor="let item of listaProductos">
+        <div class="card">
+            <div class="card-header text-center">
+                <h4 class="card-title">
+                    Producto: {{ item.nombreProducto}}
+                </h4>
+            </div>
+
+            <div class="card-body">
+                <p class="mb-1 text-center">
+                    <strong>
+                        Tipo de pieza: {{ item.tipoPieza.tipoPieza }}
+                    </strong>
+                </p>
+                <p class="mb-1 text-center">
+                    <strong>
+                        Precio: {{ item.tipoPieza.precio }}
+                    </strong>
+                </p>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-4">
+                        <button class="btn btn-default">
+                            <span>
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </button>
+                        <button class="btn btn-default">
+                            <span>
+                                <i class="fas fa-trash"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control" placeholder="Ingrese cantidad">
+                    </div>
+                </div>
+            
+               
+            </div>
+        </div>
+    </div>
+</div>
